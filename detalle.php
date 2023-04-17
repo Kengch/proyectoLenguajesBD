@@ -3,7 +3,7 @@
 
 
 
-<h1>putaku</h1>
+
 
 
 <?php include_once('footer.php')?>
