@@ -17,9 +17,24 @@
         <div class="collapse navbar-collapse" id="navbarNavDropdown">
             <ul class="navbar-nav">
                 <li class="nav-item active">
-                    <a class="nav-link" href="#">Producto</a>
+                    <a class="nav-link" href="/proyectoLenguajesBD/index.php">Producto</a>
                 </li>
 
+                <li class="nav-item active">
+                    <a class="nav-link" href="/proyectoLenguajesBD/detalleIndex.php">Detalle</a>
+                </li>
+
+                <li class="nav-item active">
+                    <a class="nav-link" href="/proyectoLenguajesBD/movimientoIndex.php">Movimiento</a>
+                </li>
+
+                <li class="nav-item active">
+                    <a class="nav-link" href="/proyectoLenguajesBD/personaIndex.php">Persona</a>
+                </li>
+
+                <li class="nav-item active">
+                    <a class="nav-link" href="/proyectoLenguajesBD/marcaIndex.php">Persona</a>
+                </li>
             </ul>
         </div>
       </nav>
