@@ -4,7 +4,7 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
@@ -17,7 +17,7 @@
         <div class="collapse navbar-collapse" id="navbarNavDropdown">
             <ul class="navbar-nav">
                 <li class="nav-item active">
-                    <a class="nav-link" href="/proyectoLenguajesBD/index.php">Producto</a>
+                    <a class="nav-link" href="/proyectoLenguajesBD/producto/index.php">Producto</a>
                 </li>
 
                 <li class="nav-item active">
@@ -29,11 +29,11 @@
                 </li>
 
                 <li class="nav-item active">
-                    <a class="nav-link" href="/proyectoLenguajesBD/personaIndex.php">Persona</a>
+                    <a class="nav-link" href="/proyectoLenguajesBD/persona/personaIndex.php">Persona</a>
                 </li>
 
                 <li class="nav-item active">
-                    <a class="nav-link" href="/proyectoLenguajesBD/marcaIndex.php">Persona</a>
+                    <a class="nav-link" href="/proyectoLenguajesBD/marcaIndex.php">Marcas</a>
                 </li>
             </ul>
         </div>
