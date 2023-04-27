@@ -1,11 +1,11 @@
 <?php include_once('../header.php')?>
 <?php include_once('../conexionBD.php')?>
 <?php 
-    //para obtener todas las personas
+    //para obtener todas las marcas
         $curs = oci_new_cursor($conn);
 
         // Preparación de la consulta que llama al procedimiento almacenado
-        $query = "BEGIN obtener_personas(:param1); END;";
+        $query = "BEGIN obtener_lugares_creacion(:param1); END;";
         $stmt = oci_parse($conn, $query);
 
     
@@ -16,10 +16,10 @@
 
         oci_execute($curs); 
 
-        $personas = array();
+        $lugares = array();
         
         while ($data = oci_fetch_assoc($curs )) {
-            $personas[] = $data;
+            $lugares[] = $data;
         }
     //fin
 
@@ -27,10 +27,9 @@
     oci_close($conn);
 ?>
 
-
 <div class=" mt-3 mb-3 mr-5 text-right">
     <div class="d-inline-block">
-        <a class="btn btn-primary btn-lg" href="personaCrear.php">Agregar</a>
+        <a class="btn btn-primary btn-lg" href="lugarCrear.php">Agregar</a>
     </div>
 </div>
 
@@ -41,28 +40,22 @@
                 <thead>
                     <tr>
                         <th scope="col">Id</th>
-                        <th scope="col">Nombre</th>
-                        <th scope="col">Apellidos</th>
-                        <th scope="col">Correo</th>
-                        <th scope="col">Cedula</th>
-                        <th scope="col">Tipo persona</th>
+                        <th scope="col">Direccion</th>
+                        <th scope="col">Canton</th>
                         <th scope="col">Fecha de creacion</th>
                         <th scope="col">Acciones</th>
                     </tr>
                 </thead>
                 <tbody>
-                    <?php if(!empty($personas)):?>
-                        <?php foreach($personas as $k => $v):?>
+                    <?php if(!empty($lugares)):?>
+                        <?php foreach($lugares as $k => $v):?>
                             <tr>
                                 <th><?php echo $v['ID']?></th>
-                                <th><?php echo $v['NOMBRE']?></th>
-                                <th><?php echo $v['APELLIDOS']?></th>
-                                <th><?php echo $v['CORREO']?></th>
-                                <th><?php echo $v['CEDULA']?></th>
-                                <th><?php echo $v['DESCRIPCION']?></th>
+                                <th><?php echo $v['DIRECCION']?></th>
+                                <th><?php echo $v['CANTON']?></th>
                                 <th><?php echo $v['FECHA_CREACION']?></th>
                                 <th>
-                                    <form method="post" action="personaEdit.php">
+                                    <form method="post" action="lugaresEditar.php">
                                         <input type="hidden" name="id" value="<?php echo $v['ID']?>">
                                         <button type="submit" name="boton" class="btn btn-warning">Editar</button>
                                     </form>
