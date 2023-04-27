@@ -1,17 +1,17 @@
-<?php 
+<?php
     include_once('../conexionBD.php');
 
-    $nombre = $_POST['nombre'];
+    $id = $_POST['id'];
 
-    if(!empty($nombre)){
-        $query = "BEGIN insertar_marca(:nombre); END;";
+    if(!empty($id)){
+        $query = "BEGIN eliminar_lugar_creacion(:id); END;";
         $stmt = oci_parse($conn, $query);
     
-        oci_bind_by_name($stmt, ':nombre', $nombre);
+        oci_bind_by_name($stmt, ':id', $id);
     
         // Ejecución de la consulta
         $resultado = oci_execute($stmt);
-            
+         
         // Verificación de errores en la ejecución de la consulta
         if (!$resultado) {
             $e = oci_error($stmt);
@@ -22,6 +22,6 @@
         oci_close($conn);
     }
 
-    header('Location: marcaIndex.php');
+    header('Location: lugaresIndex.php');
     exit;
 ?>

@@ -50,7 +50,7 @@
         $curs = oci_new_cursor($conn);
 
         // Preparación de la consulta que llama al procedimiento almacenado
-        $query = "BEGIN obtener_lugar_creacion(:param1); END;";
+        $query = "BEGIN obtener_lugares_creacion(:param1); END;";
         $stmt = oci_parse($conn, $query);
 
 

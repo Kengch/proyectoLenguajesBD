@@ -35,6 +35,14 @@
                 <li class="nav-item active">
                     <a class="nav-link" href="/proyectoLenguajesBD/marca/marcaIndex.php">Marcas</a>
                 </li>
+
+                <li class="nav-item active">
+                    <a class="nav-link" href="/proyectoLenguajesBD/lugares/lugaresIndex.php">Lugares</a>
+                </li>
+
+                <li class="nav-item active">
+                    <a class="nav-link" href="/proyectoLenguajesBD/reportes/reportesIndex.php">Reportes</a>
+                </li>
             </ul>
         </div>
       </nav>

@@ -21,7 +21,7 @@
     }
     
     //verifica si el id existe
-    if(isset($id)){
+    if(!empty($id) && !empty($nombre) && !empty($apellidos) && !empty($correo)){
         // llama al procedimiento almacenado
         $query = "BEGIN actualizar_persona(:id, :nombre, :apellidos, :correo, :tipo_persona); END;";
         $stmt = oci_parse($conn, $query);
