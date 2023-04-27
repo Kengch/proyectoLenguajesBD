@@ -5,11 +5,7 @@
     $id_producto = $_POST['producto'];
     $tipo_movimiento = 2;
 
-    echo $id_persona;
-    echo $id_producto;
-    echo $tipo_movimiento;die;
-    
-    $query = "BEGIN insertar_tipo_movimiento(:id_producto, :tipo_movimiento, :id_persona); END;";
+    $query = "BEGIN insertar_movimiento(:id_producto, :tipo_movimiento, :id_persona); END;";
     $stmt = oci_parse($conn, $query);
 
     oci_bind_by_name($stmt, ':id_producto', $id_producto);

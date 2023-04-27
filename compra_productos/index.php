@@ -1,11 +1,11 @@
 <?php include_once('../header.php')?>
 <?php include_once('../conexionBD.php')?>
 <?php
-     //para obtener todas los productos
+     //para obtener la lista de compras
         $curs = oci_new_cursor($conn);
 
         // Preparación de la consulta que llama al procedimiento almacenado
-        $query = "BEGIN obtener_productos(:param1); END;";
+        $query = "BEGIN obtener_lista_compras(:param1); END;";
         $stmt = oci_parse($conn, $query);
 
     
@@ -16,13 +16,12 @@
 
         oci_execute($curs); 
 
-        $productos = array();
+        $compras = array();
         
         while ($data = oci_fetch_assoc($curs )) {
-            $productos[] = $data;
+            $compras[] = $data;
         }
     //fin
-
     // se cierra la conexion
     oci_close($conn);
 ?>
@@ -39,37 +38,26 @@
             <table class="table">
                 <thead>
                     <tr>
-                        <th scope="col">Id</th>
+                        <th scope="col">Descripcion</th>
                         <th scope="col">Nombre</th>
+                        <th scope="col">Apellidos</th>
+                        <th scope="col">Cedula</th>
                         <th scope="col">Detalle</th>
                         <th scope="col">Marca</th>
-                        <th scope="col">Precio</th>
-                        <th scope="col">Peso</th>
-                        <th scope="col">Acciones</th>
+                        <th scope="col">Comprado</th>
                     </tr>
                 </thead>
                 <tbody>
-                    <?php if(!empty($productos)):?>
-                        <?php foreach($productos as $k => $v):?>
+                    <?php if(!empty($compras)):?>
+                        <?php foreach($compras as $k => $v):?>
                             <tr>
-                                <th><?php echo $v['ID']?></th>
-                                <th><?php echo $v['NOMBRE']?></th>
+                                <th><?php echo $v['DESCRIPCION']?></th>
+                                <th><?php echo $v['NOMBRE_PERSONA']?></th>
+                                <th><?php echo $v['APELLIDOS']?></th>
+                                <th><?php echo $v['CEDULA']?></th>
                                 <th><?php echo $v['DETALLE']?></th>
                                 <th><?php echo $v['MARCA']?></th>
-                                <th><?php echo $v['PRECIO']?></th>
-                                <th><?php echo $v['PESO']?> kg</th>
-                                <th>
-                                    <form method="post" action="productoEdit.php">
-                                        <input type="hidden" name="id" value="<?php echo $v['ID']?>">
-                                        <button type="submit" name="boton" class="btn btn-warning">Editar</button>
-                                    </form>
-
-                                    <form method="post" action="eliminar.php">
-                                        <input type="hidden" name="id" value="<?php echo $v['ID']?>">
-                                        <button type="submit" name="boton" class="btn btn-danger">Eliminar</button>
-                                    </form>
-                                </th>
-                            </tr>
+                                <th><?php echo $v['FECHA_CREACION']?></th>
                         <?php endforeach;?>
                     <?php endif;?>
                 </tbody>

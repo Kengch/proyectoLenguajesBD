@@ -51,7 +51,7 @@
 ?>
 
 <div class="container">
-    <form action="post" action="crear.php">
+    <form method="post" action="crear.php">
         <div class="form-group">
             <label for="TIPO_PERSONA">Seleccione un usuario</label>
             <select name="TIPO_PERSONA" id="TIPO_PERSONA" class="form-control">
