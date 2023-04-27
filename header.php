@@ -25,7 +25,7 @@
                 </li>
 
                 <li class="nav-item active">
-                    <a class="nav-link" href="/proyectoLenguajesBD/movimientoIndex.php">Movimientos</a>
+                    <a class="nav-link" href="/proyectoLenguajesBD/movimientos/movimientoIndex.php">Movimientos</a>
                 </li>
 
                 <li class="nav-item active">
@@ -33,7 +33,7 @@
                 </li>
 
                 <li class="nav-item active">
-                    <a class="nav-link" href="/proyectoLenguajesBD/marcaIndex.php">Marcas</a>
+                    <a class="nav-link" href="/proyectoLenguajesBD/marca/marcaIndex.php">Marcas</a>
                 </li>
             </ul>
         </div>
