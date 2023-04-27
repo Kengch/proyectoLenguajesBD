@@ -12,24 +12,24 @@
   </head>
   <body>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <a class="navbar-brand" href="#">Navbar</a>
+        <a class="navbar-brand" href="#">KengSHOP</a>
         
         <div class="collapse navbar-collapse" id="navbarNavDropdown">
             <ul class="navbar-nav">
                 <li class="nav-item active">
-                    <a class="nav-link" href="/proyectoLenguajesBD/producto/index.php">Producto</a>
+                    <a class="nav-link" href="/proyectoLenguajesBD/producto/index.php">Vender Productos</a>
                 </li>
 
                 <li class="nav-item active">
-                    <a class="nav-link" href="/proyectoLenguajesBD/detalleIndex.php">Detalle</a>
+                    <a class="nav-link" href="/proyectoLenguajesBD/compra_productos/index.php">Comprar Productos</a>
                 </li>
 
                 <li class="nav-item active">
-                    <a class="nav-link" href="/proyectoLenguajesBD/movimientoIndex.php">Movimiento</a>
+                    <a class="nav-link" href="/proyectoLenguajesBD/movimientoIndex.php">Movimientos</a>
                 </li>
 
                 <li class="nav-item active">
-                    <a class="nav-link" href="/proyectoLenguajesBD/persona/personaIndex.php">Persona</a>
+                    <a class="nav-link" href="/proyectoLenguajesBD/persona/personaIndex.php">Personas</a>
                 </li>
 
                 <li class="nav-item active">

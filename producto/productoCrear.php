@@ -46,7 +46,7 @@
         }
     //fin
 
-    //obtengo las marcass
+    //obtengo los lugares de creacion
         $curs = oci_new_cursor($conn);
 
         // Preparación de la consulta que llama al procedimiento almacenado

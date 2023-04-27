@@ -1,7 +1,7 @@
 <?php include_once('../header.php')?>
 <?php include_once('../conexionBD.php')?>
 <?php
-     //para obtener todas las personas
+     //para obtener todas los productos
         $curs = oci_new_cursor($conn);
 
         // Preparación de la consulta que llama al procedimiento almacenado
@@ -30,7 +30,7 @@
 
 <div class=" mt-3 mb-3 mr-5 text-right">
     <div class="d-inline-block">
-        <a class="btn btn-primary btn-lg" href="productoCrear.php">Agregar</a>
+        <a class="btn btn-primary btn-lg" href="productoCompra.php">Comprar</a>
     </div>
 </div>
 <div class="">
@@ -45,9 +45,6 @@
                         <th scope="col">Marca</th>
                         <th scope="col">Precio</th>
                         <th scope="col">Peso</th>
-                        <th scope="col">Agregado por</th>
-                        <th scope="col">Lugar de creacion</th>
-                        <th scope="col">Fecha de creacion</th>
                         <th scope="col">Acciones</th>
                     </tr>
                 </thead>
@@ -61,9 +58,6 @@
                                 <th><?php echo $v['MARCA']?></th>
                                 <th><?php echo $v['PRECIO']?></th>
                                 <th><?php echo $v['PESO']?> kg</th>
-                                <th><?php echo $v['PERSONA']?></th>
-                                <th><?php echo $v['LUGAR_CREACION']?></th>
-                                <th><?php echo $v['FECHA_CREACION']?></th>
                                 <th>
                                     <form method="post" action="productoEdit.php">
                                         <input type="hidden" name="id" value="<?php echo $v['ID']?>">
