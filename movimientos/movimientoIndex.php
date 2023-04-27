@@ -33,6 +33,7 @@
             <table class="table">
                 <thead>
                     <tr>
+                        <th scope="col">ID</th>
                         <th scope="col">Detalle</th>
                         <th scope="col">Realizado por</th>
                         <th scope="col">Fecha de creacion</th>
@@ -42,6 +43,7 @@
                     <?php if(!empty($movimientos)):?>
                         <?php foreach($movimientos as $k => $v):?>
                             <tr>
+                                <th><?php echo $v['ID']?></th>
                                 <th><?php echo $v['DESCRIPCION']?></th>
                                 <th><?php echo $v['NOMBRE']?></th>
                                 <th><?php echo $v['FECHA_CREACION']?></th>

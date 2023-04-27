@@ -41,7 +41,7 @@
                 </li>
 
                 <li class="nav-item active">
-                    <a class="nav-link" href="/proyectoLenguajesBD/reportes/reportesIndex.php">Reportes</a>
+                    <a class="nav-link" href="/proyectoLenguajesBD/reportes/index.php">Reportes</a>
                 </li>
             </ul>
         </div>
